@@ -1,18 +1,52 @@
 .container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 94px 15px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 60px 15px;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 94px 15px;
+    width: 1200px;
+  }
+  .heder & {
+    padding: 16px 15px;
+    @media screen and (min-width: 768px) {
+      padding: 0 15px;
+    }
+  }
+  .hero & {
+    padding: 118px 15px;
+    @media screen and (min-width: 1200px) {
+      padding: 200px 15px;
+    }
+  }
+  .services & {
+    padding-top: 0px;
+  }
 
   .footer & {
     padding-top: 60px;
     padding-bottom: 60px;
   }
-  .hero & {
-    padding-top: 200px;
-    padding-bottom: 200px;
-  }
   .portfolio & {
     padding-top: 100px;
   }
+  .benefits .container {
+    margin: -15px;
+  }
 }
+// @media screen and (min-width: 768px) and (max-width: 1199px) {
+//   .benefits .container {
+//     padding: 45px 0px;
+//   }
+// }
+// @media screen and (min-width: 1200px) {
+//   .benefits .container {
+//     padding: 79px 0px;
+//   }
+// }
