@@ -1,3 +1,7 @@
+.container-heder {
+  border-bottom: 1px solid #ececec;
+  background-color: #ffffff;
+}
 @media screen and (max-width: 767px) {
   .heder-nav {
     display: none;
@@ -6,6 +10,7 @@
     display: none;
   }
 }
+
 @media screen and (min-width: 768px) {
   .navigation-list {
     display: flex;
@@ -81,9 +86,6 @@
     justify-content: space-between;
   }
 }
-// @media screen and (min-width: 768px) and (max-width: 1199) {
-
-// }
 
 @media screen and (min-width: 1200px) {
   .contacts {
@@ -99,6 +101,7 @@
     margin-right: auto;
   }
 }
+
 // .navigation-list {
 //   // display: flex;
 // }
