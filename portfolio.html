@@ -17,32 +17,50 @@
     <header class="heder">
         <div class="container container-heder">
             <a href="./" class="logo link animate__pulse"><span class="logo-accent">Web</span>Studio</a>
-            <nav class="heder-nav">
-                <ul class="navigation-list list">
-                    <li class="navigation-list-item">
-                        <a href="#" class="nav-link link current">Студия</a>
-                    </li>
-                    <li class="navigation-list-item">
-                        <a href="./portfolio.html" class="nav-link link">Портфолио</a>
-                    </li>
-                    <li class="navigation-list-item">
-                        <a href="#" class="nav-link link">Контакты</a>
-                    </li>
+            <button type="button" class="menu-mobail-bt" data-modal data-modal-open>
+                <svg class="icon" width=40px height=40px aria-label="кнопка открытия мобильного меню">
+                    <use href="./images/svg/sprite.svg#icon-menu-mobail" class="icon-menu-mobail"></use>
+                </svg>
+            </button>
+            <div class="backdrop-menu-mobail">
+                <button type="button" class="menu-mobail-bt" data-modal-close>
+                    <svg class="icon" width=40px height=40px aria-label="кнопка закрытия мобильного меню">
+                        <use href="./images/svg/sprite.svg#icon-close-menu-mobail" class="icon-close-menu-mobail"></use>
+                    </svg>
+                </button>
+                <nav class="heder-nav">
+                    <ul class="navigation-list list">
+                        <li class="navigation-list-item">
+                            <a href="./index.html" class="nav-link link current">Студия</a>
+                        </li>
+                        <li class="navigation-list-item">
+                            <a href="./portfolio.html" class="nav-link link">Портфолио</a>
+                        </li>
+                        <li class="navigation-list-item">
+                            <a href="#" class="nav-link link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="contacts list">
+                    <li class="contacts-item"><a href="mailto:info@devstudio.com" class="contact-mail link">
+                            <svg class="icon">
+                                <use href="./images/svg/sprite.svg#icon-envelope" width=16px height=16px class="icon-meil">
+                                </use>
+                            </svg>
+                            info@devstudio.com</a></li>
+                    <li class="contacts-item"><a href="tel:+380961111111" class="contact-number link">
+                            <svg class="icon">
+                                <use href="./images/svg/sprite.svg#icon-phone" width=10px height=16px> </use>
+                            </svg>
+                            +38 096 111 11 11</a></li>
                 </ul>
-            </nav>
-            <ul class="contacts list">
-                <li class="contacts-item"><a href="mailto:info@devstudio.com" class="contact-mail link">
-                        <svg class="icon">
-                            <use href="./images/svg/sprite.svg#icon-envelope" width=16px height=16px class="icon-meil">
-                            </use>
-                        </svg>
-                        info@devstudio.com</a></li>
-                <li class="contacts-item"><a href="tel:+380961111111" class="contact-number link">
-                        <svg class="icon">
-                            <use href="./images/svg/sprite.svg#icon-phone" width=10px height=16px> </use>
-                        </svg>
-                        +38 096 111 11 11</a></li>
-            </ul>
+                <ul class="social__list-mobail">
+                    <li class="social__item-mobail"><a href="" class="social__link-mobail">Instagram</a></li>
+                    <li class="social__item-mobail"><a href="" class="social__link-mobail">Twitter</a></li>
+                    <li class="social__item-mobail"><a href="" class="social__link-mobail">Facebook</a></li>
+                    <li class="social__item-mobail"><a href="" class="social__link-mobail">LinkedIn</a></li>
+                </ul>
+            </div>
         </div>
     </header>
     <main>
@@ -318,5 +336,6 @@
         </div>
     </div>
 </footer>
+<script src="./js/modal.js"></script>
 </body>
 </html>

@@ -3,17 +3,130 @@
   background-color: #ffffff;
 }
 @media screen and (max-width: 767px) {
-  .heder-nav {
+  .container-heder {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu-mobail-bt {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: #ffffff;
+  }
+  .menu-mobail-bt .icon {
+    fill: $title-color;
+    width: 40px;
+    height: 40px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      fill: $accent-color;
+    }
+  }
+  .contacts .icon {
     display: none;
   }
-  .contacts {
+  .backdrop-menu-mobail {
     display: none;
+    position: absolute;
+    z-index: 5;
+    left: 0px;
+    top: 0px;
+    padding: 48px 40px;
+
+    width: 100%;
+    max-height: 850px;
+
+    background-color: #ffffff;
+    .menu-mobail-bt {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+    }
+  }
+  .menu-mobail-bt.oupen + .backdrop-menu-mobail {
+    display: block;
+  }
+  .nav-link {
+    color: $title-color;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.175;
+    letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+  .navigation-list-item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  .navigation-list-item:last-child {
+    margin-bottom: 302px;
+  }
+  // .navigation-list-item:last-child {
+  //   margin-bottom: auto;
+  // }
+  .heder .contacts {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 64px;
+  }
+  .contact-number {
+    margin-bottom: 32px;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.176;
+    letter-spacing: 0.02em;
+    color: $accent-color;
+  }
+  .contact-mail {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.166;
+    letter-spacing: 0.02em;
+    color: $text-color;
+  }
+  .social__list-mobail {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -10px;
+  }
+  .social__item-mobail:not(:last-child) {
+    padding-right: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+  .social__link-mobail {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: $accent-color;
   }
 }
 
 @media screen and (min-width: 768px) {
+  .menu-mobail-bt {
+    display: none;
+  }
+  .social__list-mobail {
+    display: none;
+  }
+  .backdrop-menu-mobail {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
   .navigation-list {
     display: flex;
+  }
+  .heder-nav {
+    margin-right: 80px;
   }
   .contacts .icon {
     width: 16px;
@@ -82,8 +195,8 @@
   .contacts-item:last-child {
     margin-right: 11px;
   }
-  .container-heder {
-    justify-content: space-between;
+  .heder .logo {
+    margin-right: 88px;
   }
 }
 

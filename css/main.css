@@ -84,7 +84,7 @@ p {
 }
 
 .heder .container {
-  padding: 16px 15px;
+  padding: 10px 15px;
 }
 
 @media screen and (min-width: 768px) {
@@ -114,7 +114,7 @@ p {
 
 @media screen and (min-width: 1200px) {
   .portfolio .container {
-    padding-top: 100px;
+    padding: 200px 15px;
   }
 }
 
@@ -125,8 +125,8 @@ p {
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.192;
+  font-size: 24px;
+  line-height: 1.125;
   letter-spacing: 0.03em;
   color: #212121;
   animation-duration: 1000ms;
@@ -141,6 +141,13 @@ p {
   color: #ffffff;
   margin-bottom: 20px;
   margin-right: 0px;
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.192;
+  }
 }
 
 .backdrop {
@@ -171,13 +178,27 @@ p {
   padding: 40px 40px;
   top: 50%;
   left: 50%;
+  width: calc(100% - 15px * 2);
+  max-height: 660px;
   transform: translate(-50%, -50%) scale(1);
-  width: 528px;
-  min-height: 581px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    height: 660px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal-button {
@@ -205,9 +226,17 @@ p {
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   color: #212121;
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form .modal-appeal {
+    text-align: left;
+    line-height: 1.15;
+  }
 }
 
 .modal-form .item {
@@ -240,7 +269,7 @@ p {
   display: block;
   padding: 12px 16px;
   resize: none;
-  width: 448px;
+  width: 100%;
   min-height: 120px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -286,7 +315,7 @@ p {
 }
 
 .comments-label {
-  display: inline-block;
+  display: block;
 }
 
 .checkbox-wraper p {
@@ -298,17 +327,29 @@ p {
   color: #757575;
 }
 
+.checkbox__text {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.03em;
+  margin-right: 3px;
+  color: #757575;
+}
+
 .checkbox-wraper .link {
   position: relative;
   display: inline-block;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.03em;
   color: #2196f3;
 }
 
 .checkbox-wraper .link::after {
   position: absolute;
   right: 0px;
-  bottom: 5px;
-  content: '';
+  bottom: 0px;
+  content: "";
   display: block;
   height: 1px;
   width: 100%;
@@ -353,6 +394,7 @@ p {
 
 .checkbox-wraper .icon {
   display: inline-block;
+  margin-right: 8px;
   width: 16px;
   height: 16px;
   border-radius: 2px;
@@ -400,17 +442,123 @@ p {
 }
 
 @media screen and (max-width: 767px) {
-  .heder-nav {
+  .container-heder {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu-mobail-bt {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: #ffffff;
+  }
+  .menu-mobail-bt .icon {
+    fill: #212121;
+    width: 40px;
+    height: 40px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .menu-mobail-bt .icon:hover, .menu-mobail-bt .icon:focus {
+    fill: #2196f3;
+  }
+  .contacts .icon {
     display: none;
   }
-  .contacts {
+  .backdrop-menu-mobail {
     display: none;
+    position: absolute;
+    z-index: 5;
+    left: 0px;
+    top: 0px;
+    padding: 48px 40px;
+    width: 100%;
+    max-height: 850px;
+    background-color: #ffffff;
+  }
+  .backdrop-menu-mobail .menu-mobail-bt {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  }
+  .menu-mobail-bt.oupen + .backdrop-menu-mobail {
+    display: block;
+  }
+  .nav-link {
+    color: #212121;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.175;
+    letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .nav-link:hover, .nav-link:focus {
+    color: #2196f3;
+  }
+  .navigation-list-item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  .navigation-list-item:last-child {
+    margin-bottom: 302px;
+  }
+  .heder .contacts {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 64px;
+  }
+  .contact-number {
+    margin-bottom: 32px;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.176;
+    letter-spacing: 0.02em;
+    color: #2196f3;
+  }
+  .contact-mail {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.166;
+    letter-spacing: 0.02em;
+    color: #757575;
+  }
+  .social__list-mobail {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -10px;
+  }
+  .social__item-mobail:not(:last-child) {
+    padding-right: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+  .social__link-mobail {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: #2196f3;
   }
 }
 
 @media screen and (min-width: 768px) {
+  .menu-mobail-bt {
+    display: none;
+  }
+  .social__list-mobail {
+    display: none;
+  }
+  .backdrop-menu-mobail {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
   .navigation-list {
     display: flex;
+  }
+  .heder-nav {
+    margin-right: 80px;
   }
   .contacts .icon {
     width: 16px;
@@ -477,8 +625,8 @@ p {
   .contacts-item:last-child {
     margin-right: 11px;
   }
-  .container-heder {
-    justify-content: space-between;
+  .heder .logo {
+    margin-right: 88px;
   }
 }
 
