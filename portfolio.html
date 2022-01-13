@@ -7,31 +7,29 @@
     <title>webstudio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="./css/main.min.css" rel="stylesheet">
 </head>
-
 <body>
     <header class="heder">
         <div class="container container-heder">
             <a href="./" class="logo link animate__pulse"><span class="logo-accent">Web</span>Studio</a>
-            <button type="button" class="menu-mobail-bt" data-modal data-modal-open>
-                <svg class="icon" width=40px height=40px aria-label="кнопка открытия мобильного меню">
+            <button type="button" class="menu-mobail-bt" data-menu-button>
+                <svg class="icon" width=40px height=40px aria-label="переключатель мобильного меню">
                     <use href="./images/svg/sprite.svg#icon-menu-mobail" class="icon-menu-mobail"></use>
+                    <use href="./images/svg/sprite.svg#icon-close-menu-mobail" class="icon-close-menu-mobail"></use>
                 </svg>
             </button>
-            <div class="backdrop-menu-mobail">
-                <button type="button" class="menu-mobail-bt" data-modal-close>
-                    <svg class="icon" width=40px height=40px aria-label="кнопка закрытия мобильного меню">
-                        <use href="./images/svg/sprite.svg#icon-close-menu-mobail" class="icon-close-menu-mobail"></use>
-                    </svg>
-                </button>
+            <div class="backdrop-menu-mobail" data-menu>
                 <nav class="heder-nav">
                     <ul class="navigation-list list">
                         <li class="navigation-list-item">
-                            <a href="./index.html" class="nav-link link current">Студия</a>
+                            <a href="./images/" class="nav-link link current">Студия</a>
                         </li>
                         <li class="navigation-list-item">
                             <a href="./portfolio.html" class="nav-link link">Портфолио</a>
