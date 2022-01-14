@@ -40,13 +40,12 @@
     display: none;
   }
   .backdrop-menu-mobail {
-    transform: translateY(-110%);
-    opacity: 0;
+    transform: translateX(110%);
     position: absolute;
     left: 0px;
-    top: 60px;
+    top: 61px;
     padding: 48px 40px;
-    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1),
       opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
     width: 100%;
     max-height: 850px;
@@ -59,8 +58,7 @@
     }
   }
   .menu-mobail-bt.oupen + .backdrop-menu-mobail {
-    opacity: 1;
-    transform: translateY(0px);
+    transform: translateX(0px);
   }
   .nav-link {
     color: $title-color;
