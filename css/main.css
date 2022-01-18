@@ -468,16 +468,17 @@ p {
   .menu-mobail-bt .icon-close-menu-mobail {
     display: none;
   }
-  .menu-mobail-bt.oupen .icon-close-menu-mobail {
+  .menu-mobail-bt .is-open .icon-close-menu-mobail {
     display: block;
   }
-  .menu-mobail-bt.oupen .icon-menu-mobail {
+  .menu-mobail-bt .is-open .icon-menu-mobail {
     display: none;
   }
   .contacts .icon {
     display: none;
   }
   .backdrop-menu-mobail {
+    z-index: 100;
     transform: translateY(-110%);
     position: absolute;
     left: 0px;
@@ -493,7 +494,8 @@ p {
     top: 10px;
     right: 15px;
   }
-  .menu-mobail-bt.oupen + .backdrop-menu-mobail {
+  .menu-mobail-bt.is-open + .backdrop-menu-mobail {
+    z-index: 100;
     transform: translateX(0px);
   }
   .nav-link {
