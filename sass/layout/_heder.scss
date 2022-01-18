@@ -3,6 +3,11 @@
   background-color: #ffffff;
 }
 @media screen and (max-width: 767px) {
+  // .heder {
+  //   position: absolute;
+  //   overflow: hidden;
+  //   z-index: 100;
+  // }
   .container-heder {
     position: relative;
     display: flex;
@@ -40,7 +45,7 @@
     display: none;
   }
   .backdrop-menu-mobail {
-    transform: translateX(110%);
+    transform: translateY(-110%);
     position: absolute;
     left: 0px;
     top: 61px;
