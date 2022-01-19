@@ -467,11 +467,17 @@ p {
   .menu-mobail-bt .icon-close-menu-mobail {
     display: none;
   }
-  .menu-mobail-bt .is-open .icon-close-menu-mobail {
+  .menu-mobail-bt.is-open .icon-close-menu-mobail {
     display: block;
   }
-  .menu-mobail-bt .is-open .icon-menu-mobail {
+  .menu-mobail-bt.is-open .icon-menu-mobail {
     display: none;
+  }
+  .menu-mobail-bt .icon-close-menu-mobail {
+    display: none;
+  }
+  .menu-mobail-bt .icon-menu-mobail {
+    display: block;
   }
   .contacts .icon {
     display: none;

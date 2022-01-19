@@ -33,12 +33,20 @@
   .menu-mobail-bt .icon-close-menu-mobail {
     display: none;
   }
-  .menu-mobail-bt .is-open {
+  .menu-mobail-bt.is-open {
     .icon-close-menu-mobail {
       display: block;
     }
     .icon-menu-mobail {
       display: none;
+    }
+  }
+  .menu-mobail-bt {
+    .icon-close-menu-mobail {
+      display: none;
+    }
+    .icon-menu-mobail {
+      display: block;
     }
   }
   .contacts .icon {
