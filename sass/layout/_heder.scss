@@ -19,6 +19,9 @@
     height: 40px;
     border: none;
     background-color: #ffffff;
+    &:focus {
+      outline: none;
+    }
   }
   .menu-mobail-bt .icon {
     fill: $title-color;

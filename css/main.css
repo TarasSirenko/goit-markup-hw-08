@@ -455,6 +455,9 @@ p {
     border: none;
     background-color: #ffffff;
   }
+  .menu-mobail-bt:focus {
+    outline: none;
+  }
   .menu-mobail-bt .icon {
     fill: #212121;
     width: 40px;
